@@ -1,0 +1,13 @@
+<div class="multiselect-item">
+    <div>
+        <span> {{item.name}} </span>
+        <span class="item-checkbox">
+            <mat-checkbox [ngModel]="item.checked" (ngModelChange)="onValueChanged($event)"> </mat-checkbox>
+        </span>
+    </div>
+    <div>
+        <app-multiselect-item *ngFor="let child of item.children; let i = index;" [item]='child'
+            (valueChanged)="childValueChanged($event)">
+        </app-multiselect-item>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+<div>
+  <app-collapsible [title]="'Property Selector'" [subtitle]="getContainerSubtitle()">
+    <app-multiselect-item *ngFor='let item of items' [item]='item'></app-multiselect-item>
+    <button mat-button class="button-style" (click)="saveData()">Apply</button>
+  </app-collapsible>
+
+</div>

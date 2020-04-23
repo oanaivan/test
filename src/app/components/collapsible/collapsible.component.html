@@ -1,0 +1,13 @@
+<div class="collapsable-container">
+    <div class="accordion" (click)="isCollapsed = !isCollapsed">
+        <span> {{title}} </span>
+        <span *ngIf="!isCollapsed" class="material-icons"> keyboard_arrow_down </span>
+        <span *ngIf="isCollapsed" class="material-icons"> keyboard_arrow_up </span>
+        <div>
+           {{subtitle}}
+        </div>
+    </div>
+    <div class="body-container" *ngIf="isCollapsed">
+        <ng-content></ng-content>
+    </div>
+</div>
